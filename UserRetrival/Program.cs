@@ -44,12 +44,17 @@ class Program
 
     private static void ConfigureServices(IServiceCollection services)
     {
-        services.AddSingleton<IConfiguration>(new ConfigurationBuilder()
+        var configuration = new ConfigurationBuilder()
             .SetBasePath(Environment.CurrentDirectory)
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .AddEnvironmentVariables()
-            .Build());
+            .Build();
+
+        services.AddSingleton<IConfiguration>(configuration);
+        services.AddSingleton<GraphApiService>(); 
+        services.AddTransient<Functions>(); 
     }
+
 
     private static void ConfigureLogging(HostBuilderContext context, ILoggingBuilder loggingBuilder)
     {

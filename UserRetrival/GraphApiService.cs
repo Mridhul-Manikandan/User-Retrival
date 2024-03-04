@@ -6,9 +6,24 @@ namespace UserRetrival
 {
     public class GraphApiService
     {
-        public static async Task<List<User>> FetchUsersAsync(AuthenticationResult authResult)
+        private const string tenantId = "faa01fb7-5567-45f6-975c-e3218091e394";
+        private const string clientId = "1a823e0a-6b7a-46de-8145-cd4a4374fe97";
+        private const string clientSecret = "bmv8Q~S-51Sw-Kc4CSe5DPYpr3kLicMA~kSsbauH";
+        private const string authority = $"https://login.microsoftonline.com/{tenantId}" + $"/v2.0";
+        private const string graphScope = "https://graph.microsoft.com/.default";
+        private const string graphEndpoint = "https://graph.microsoft.com/v1.0/users";
+        private const string appId = "1a823e0a-6b7a-46de-8145-cd4a4374fe97";
+
+        public async Task<List<User>> FetchUsersAsync()
         {
-            var graphApiEndpoint = "https://graph.microsoft.com/v1.0/users";
+            var app = ConfidentialClientApplicationBuilder.Create(clientId)
+           .WithClientSecret(clientSecret)
+           .WithAuthority(new Uri(authority))
+           .Build();
+
+            var authResult = await app.AcquireTokenForClient(new[] { graphScope }).ExecuteAsync();
+
+            var graphApiEndpoint = $"https://graph.microsoft.com/v1.0/applications/{appId}/appRoleAssignedTo";
 
             using (var httpClient = new HttpClient())
             {
@@ -19,12 +34,15 @@ namespace UserRetrival
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(content);
                     var users = JsonConvert.DeserializeObject<UserResponse>(content);
 
                     return users.Value;
                 }
                 else
                 {
+                    var content = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Content: {content}");
                     throw new InvalidOperationException($"Failed to fetch users from Microsoft Graph API. Status code: {response.StatusCode}");
                 }
             }

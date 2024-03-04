@@ -5,17 +5,19 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using static UserRetrival.GraphApiService;
-using static UserRetrival.OktaApiService;
-
+/*using static UserRetrival.OktaApiService;
+*/
 namespace UserRetrival
 {
     public class Functions
     {
         private readonly IConfiguration _configuration;
+        private readonly GraphApiService _graphApiService;
 
-        public Functions(IConfiguration configuration)
+        public Functions(IConfiguration configuration, GraphApiService graphApiService)
         {
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _graphApiService = graphApiService ?? throw new ArgumentNullException(nameof(graphApiService));
         }
 
         [FunctionName("Data_Retrieving")]
@@ -32,24 +34,24 @@ namespace UserRetrival
                 var connectionString = _configuration["Database:ConnectionString"];
 
                 var authResult = await AzureADAuthentication.AuthenticateAsync(_configuration, scope);
-                var oktaGroups = await OktaApiService.FetchGroupsAsync(oktaDomain, oktaApiToken);
-
-                var users = await FetchUsersAsync(authResult);
+                /*                var oktaGroups = await OktaApiService.FetchGroupsAsync(oktaDomain, oktaApiToken);
+                */
+                var users = await _graphApiService.FetchUsersAsync(); 
                 var groups = await FetchGroupsAsync(authResult);
 
                 PrintUsers(users);
                 PrintGroups(groups);
 
 
-                PrintOktaUsers(oktaGroups);
-
+/*                PrintOktaUsers(oktaGroups);
+*/
                 if (TestDatabaseConnection(connectionString))
                 {
                     Console.WriteLine("Database connection successful.");
                     await DatabaseService.StoreUsersAsync(connectionString, users);
                     await DatabaseService.StoreGroupsAsync(connectionString, groups);
-                    await DatabaseService.StoreOktaGroupsAsync(connectionString, oktaGroups);
-
+/*                    await DatabaseService.StoreOktaGroupsAsync(connectionString, oktaGroups);
+*/
                     Console.WriteLine($"Data processed at {DateTime.Now}");
                 }
                 else
@@ -81,14 +83,14 @@ namespace UserRetrival
             }
         }
 
-        private void PrintOktaUsers(List<OktaGroup> oktaUsers)
+      /*  private void PrintOktaUsers(List<OktaGroup> oktaUsers)
         {
             Console.WriteLine("Retrieved Okta Users:");
             foreach (var user in oktaUsers)
             {
                 Console.WriteLine($"Okta Group ID: {user.Id}, Okta GroupName: {user.Name}, Okta Type: {user.Type}");
             }
-        }
+        }*/
 
         private bool TestDatabaseConnection(string connectionString)
         {

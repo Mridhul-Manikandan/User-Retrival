@@ -2,8 +2,8 @@
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using static UserRetrival.GraphApiService;
-using static UserRetrival.OktaApiService;
-
+/*using static UserRetrival.OktaApiService;
+*/
 namespace UserRetrival
 {
     public class DatabaseService
@@ -95,7 +95,7 @@ namespace UserRetrival
         }*/
 
 
-        public static async Task StoreOktaGroupsAsync(string connectionString, List<OktaGroup> oktaGroups)
+       /* public static async Task StoreOktaGroupsAsync(string connectionString, List<OktaGroup> oktaGroups)
         {
             using (var connection = new SqlConnection(connectionString))
             {
@@ -121,7 +121,7 @@ namespace UserRetrival
 
                 await command.ExecuteNonQueryAsync();
             }
-        }
+        }*/
 
 
     }
