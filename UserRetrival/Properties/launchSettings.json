@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UserRetrival": {
+      "commandName": "Project",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}
