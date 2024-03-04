@@ -1,0 +1,526 @@
+2024-03-04 11:48:02.807 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 11:48:02.872 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 11:48:02.873 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 11:48:02.874 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 11:48:02.881 +05:30 [INF] Starting JobHost
+2024-03-04 11:48:03.072 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 11:48:03.138 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 11:48:10+05:30 (03/04/2024 06:18:10Z)
+03/04/2024 11:48:20+05:30 (03/04/2024 06:18:20Z)
+03/04/2024 11:48:30+05:30 (03/04/2024 06:18:30Z)
+03/04/2024 11:48:40+05:30 (03/04/2024 06:18:40Z)
+03/04/2024 11:48:50+05:30 (03/04/2024 06:18:50Z)
+
+2024-03-04 11:48:03.146 +05:30 [INF] Job host started
+2024-03-04 11:48:10.075 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T11:48:10.0433239+05:30', Id="3db21d3d-31dc-4175-8195-d31e9ff3831d")
+2024-03-04 11:48:14.012 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="3db21d3d-31dc-4175-8195-d31e9ff3831d", Duration=3964ms)
+2024-03-04 11:48:14.024 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T06:18:10.0429893", duration="00:00:03.9661114", succeeded=true)
+2024-03-04 11:48:20.011 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T11:48:20.0111126+05:30', Id="e9003b94-3552-4f17-b83d-8ce0516b72f5")
+2024-03-04 11:48:22.046 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="e9003b94-3552-4f17-b83d-8ce0516b72f5", Duration=2035ms)
+2024-03-04 11:48:22.047 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T06:18:20.0111112", duration="00:00:02.0366033", succeeded=true)
+2024-03-04 11:48:25.246 +05:30 [INF] Stopping JobHost
+2024-03-04 11:48:25.261 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 11:48:25.276 +05:30 [INF] Stopped the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 11:48:25.284 +05:30 [INF] Job host stopped
+2024-03-04 12:02:54.258 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 12:02:54.322 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 12:02:54.323 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 12:02:54.324 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 12:02:54.332 +05:30 [INF] Starting JobHost
+2024-03-04 12:02:54.510 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 12:02:54.572 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 12:03:00+05:30 (03/04/2024 06:33:00Z)
+03/04/2024 12:03:10+05:30 (03/04/2024 06:33:10Z)
+03/04/2024 12:03:20+05:30 (03/04/2024 06:33:20Z)
+03/04/2024 12:03:30+05:30 (03/04/2024 06:33:30Z)
+03/04/2024 12:03:40+05:30 (03/04/2024 06:33:40Z)
+
+2024-03-04 12:02:54.580 +05:30 [INF] Job host started
+2024-03-04 12:03:00.100 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T12:03:00.0621956+05:30', Id="6edcb55f-c46e-4236-b36f-3018067b9d1a")
+2024-03-04 12:03:04.383 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="6edcb55f-c46e-4236-b36f-3018067b9d1a", Duration=4316ms)
+2024-03-04 12:03:04.394 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T06:33:00.0615973", duration="00:00:04.3120129", succeeded=true)
+2024-03-04 12:03:06.131 +05:30 [INF] Stopping JobHost
+2024-03-04 12:03:06.144 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 12:03:06.159 +05:30 [INF] Stopped the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 12:03:06.169 +05:30 [INF] Job host stopped
+2024-03-04 12:08:36.407 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 12:08:36.488 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 12:08:36.490 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 12:08:36.491 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 12:08:36.498 +05:30 [INF] Starting JobHost
+2024-03-04 12:08:36.655 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 12:08:36.737 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 12:08:40+05:30 (03/04/2024 06:38:40Z)
+03/04/2024 12:08:50+05:30 (03/04/2024 06:38:50Z)
+03/04/2024 12:09:00+05:30 (03/04/2024 06:39:00Z)
+03/04/2024 12:09:10+05:30 (03/04/2024 06:39:10Z)
+03/04/2024 12:09:20+05:30 (03/04/2024 06:39:20Z)
+
+2024-03-04 12:08:36.744 +05:30 [INF] Job host started
+2024-03-04 12:08:40.063 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T12:08:40.0317270+05:30', Id="7bae70b5-2727-4738-a214-7edbe48a9bc3")
+2024-03-04 12:08:42.776 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="7bae70b5-2727-4738-a214-7edbe48a9bc3", Duration=2739ms)
+2024-03-04 12:08:42.783 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T06:38:40.0312622", duration="00:00:02.7339192", succeeded=true)
+2024-03-04 12:08:49.526 +05:30 [INF] Stopping JobHost
+2024-03-04 12:08:49.539 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 12:08:49.554 +05:30 [INF] Stopped the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 12:08:49.564 +05:30 [INF] Job host stopped
+2024-03-04 12:23:42.093 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 12:23:42.179 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 12:23:42.181 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 12:23:42.182 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 12:23:42.192 +05:30 [INF] Starting JobHost
+2024-03-04 12:23:42.422 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 12:23:42.524 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 12:23:50+05:30 (03/04/2024 06:53:50Z)
+03/04/2024 12:24:00+05:30 (03/04/2024 06:54:00Z)
+03/04/2024 12:24:10+05:30 (03/04/2024 06:54:10Z)
+03/04/2024 12:24:20+05:30 (03/04/2024 06:54:20Z)
+03/04/2024 12:24:30+05:30 (03/04/2024 06:54:30Z)
+
+2024-03-04 12:23:42.538 +05:30 [INF] Job host started
+2024-03-04 12:23:50.062 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T12:23:50.0285223+05:30', Id="1a5a0b1f-a9aa-4b27-bd79-0861f11cc854")
+2024-03-04 12:25:13.307 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="1a5a0b1f-a9aa-4b27-bd79-0861f11cc854", Duration=83267ms)
+2024-03-04 12:25:13.323 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T06:53:50.0281327", duration="00:01:23.2735237", succeeded=true)
+2024-03-04 12:25:13.337 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T12:25:13.3368850+05:30', Id="30dea871-f7f0-44df-9577-8d962cc8d3a7")
+2024-03-04 13:10:10.766 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 13:10:10.909 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 13:10:10.913 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 13:10:10.915 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 13:10:10.931 +05:30 [INF] Starting JobHost
+2024-03-04 13:10:11.207 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 13:10:11.351 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 13:10:20+05:30 (03/04/2024 07:40:20Z)
+03/04/2024 13:10:30+05:30 (03/04/2024 07:40:30Z)
+03/04/2024 13:10:40+05:30 (03/04/2024 07:40:40Z)
+03/04/2024 13:10:50+05:30 (03/04/2024 07:40:50Z)
+03/04/2024 13:11:00+05:30 (03/04/2024 07:41:00Z)
+
+2024-03-04 13:10:11.376 +05:30 [INF] Job host started
+2024-03-04 13:10:20.130 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:10:20.0647600+05:30', Id="4a8296a9-b43a-41cb-b88d-3b380be1edb1")
+2024-03-04 13:10:23.639 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="4a8296a9-b43a-41cb-b88d-3b380be1edb1", Duration=3566ms)
+2024-03-04 13:10:23.660 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T07:40:20.0639153", duration="00:00:03.5567901", succeeded=true)
+2024-03-04 13:10:26.734 +05:30 [INF] Stopping JobHost
+2024-03-04 13:10:26.750 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:10:26.772 +05:30 [INF] Stopped the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:10:26.781 +05:30 [INF] Job host stopped
+2024-03-04 13:13:03.796 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 13:13:03.888 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 13:13:03.892 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 13:13:03.893 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 13:13:03.903 +05:30 [INF] Starting JobHost
+2024-03-04 13:13:04.139 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 13:13:04.232 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 13:13:10+05:30 (03/04/2024 07:43:10Z)
+03/04/2024 13:13:20+05:30 (03/04/2024 07:43:20Z)
+03/04/2024 13:13:30+05:30 (03/04/2024 07:43:30Z)
+03/04/2024 13:13:40+05:30 (03/04/2024 07:43:40Z)
+03/04/2024 13:13:50+05:30 (03/04/2024 07:43:50Z)
+
+2024-03-04 13:13:04.252 +05:30 [INF] Job host started
+2024-03-04 13:13:10.107 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:13:10.0526111+05:30', Id="575f7e87-c077-475b-be82-8876fa4d4fc7")
+2024-03-04 13:13:13.163 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="575f7e87-c077-475b-be82-8876fa4d4fc7", Duration=3103ms)
+2024-03-04 13:13:13.181 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T07:43:10.0521212", duration="00:00:03.1058298", succeeded=true)
+2024-03-04 13:13:20.015 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:13:20.0153833+05:30', Id="c63f948f-fd6c-474f-898f-bbe7a45172d6")
+2024-03-04 13:13:21.520 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="c63f948f-fd6c-474f-898f-bbe7a45172d6", Duration=1504ms)
+2024-03-04 13:13:21.527 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T07:43:20.0153821", duration="00:00:01.5119947", succeeded=true)
+2024-03-04 13:13:26.100 +05:30 [INF] Stopping JobHost
+2024-03-04 13:13:26.115 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:13:26.131 +05:30 [INF] Stopped the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:13:26.157 +05:30 [INF] Job host stopped
+2024-03-04 13:15:46.101 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 13:15:46.260 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 13:15:46.263 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 13:15:46.265 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 13:15:46.279 +05:30 [INF] Starting JobHost
+2024-03-04 13:15:46.551 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 13:15:46.666 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 13:15:50+05:30 (03/04/2024 07:45:50Z)
+03/04/2024 13:16:00+05:30 (03/04/2024 07:46:00Z)
+03/04/2024 13:16:10+05:30 (03/04/2024 07:46:10Z)
+03/04/2024 13:16:20+05:30 (03/04/2024 07:46:20Z)
+03/04/2024 13:16:30+05:30 (03/04/2024 07:46:30Z)
+
+2024-03-04 13:15:46.686 +05:30 [INF] Job host started
+2024-03-04 13:15:50.101 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:15:50.0567749+05:30', Id="d82e2a30-596f-4032-8c7a-ea628d03f577")
+2024-03-04 13:15:53.151 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="d82e2a30-596f-4032-8c7a-ea628d03f577", Duration=3085ms)
+2024-03-04 13:15:53.169 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T07:45:50.0559407", duration="00:00:03.0853611", succeeded=true)
+2024-03-04 13:15:54.225 +05:30 [INF] Stopping JobHost
+2024-03-04 13:15:54.240 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:15:54.261 +05:30 [INF] Stopped the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:15:54.278 +05:30 [INF] Job host stopped
+2024-03-04 13:32:53.690 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 13:32:53.813 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 13:32:53.817 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 13:32:53.819 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 13:32:53.837 +05:30 [INF] Starting JobHost
+2024-03-04 13:32:54.111 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 13:32:54.200 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 13:33:00+05:30 (03/04/2024 08:03:00Z)
+03/04/2024 13:33:10+05:30 (03/04/2024 08:03:10Z)
+03/04/2024 13:33:20+05:30 (03/04/2024 08:03:20Z)
+03/04/2024 13:33:30+05:30 (03/04/2024 08:03:30Z)
+03/04/2024 13:33:40+05:30 (03/04/2024 08:03:40Z)
+
+2024-03-04 13:32:54.214 +05:30 [INF] Job host started
+2024-03-04 13:33:00.196 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:33:00.0911381+05:30', Id="90dfdc46-abb7-41a5-a2e9-b8073b8abfff")
+2024-03-04 13:33:03.937 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="90dfdc46-abb7-41a5-a2e9-b8073b8abfff", Duration=3832ms)
+2024-03-04 13:33:03.955 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T08:03:00.0894984", duration="00:00:03.8089368", succeeded=true)
+2024-03-04 13:33:04.610 +05:30 [INF] Stopping JobHost
+2024-03-04 13:33:04.636 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:33:04.663 +05:30 [INF] Stopped the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:33:04.676 +05:30 [INF] Job host stopped
+2024-03-04 13:33:04.730 +05:30 [INF] Aggregate result (function=Data_Retrieving, count=1, time="2024-03-04T08:03:00.0894984+05:30", duration={AverageDuration}ms, maxDuration={MaxDuration}ms, minDuration={MinDuration}ms, success=1, failure=0, rate=100)
+2024-03-04 13:50:17.857 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 13:50:17.936 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 13:50:17.941 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 13:50:17.943 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 13:50:17.950 +05:30 [INF] Starting JobHost
+2024-03-04 13:50:18.201 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 13:50:18.296 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 13:50:20+05:30 (03/04/2024 08:20:20Z)
+03/04/2024 13:50:30+05:30 (03/04/2024 08:20:30Z)
+03/04/2024 13:50:40+05:30 (03/04/2024 08:20:40Z)
+03/04/2024 13:50:50+05:30 (03/04/2024 08:20:50Z)
+03/04/2024 13:51:00+05:30 (03/04/2024 08:21:00Z)
+
+2024-03-04 13:50:18.319 +05:30 [INF] Job host started
+2024-03-04 13:50:20.094 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:50:20.0447560+05:30', Id="a5ae16ec-d2f5-44a1-92a4-26bf44ea9b46")
+2024-03-04 13:50:29.770 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="a5ae16ec-d2f5-44a1-92a4-26bf44ea9b46", Duration=9708ms)
+2024-03-04 13:50:29.790 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T08:20:20.0438677", duration="00:00:09.7144815", succeeded=true)
+2024-03-04 13:50:30.007 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:50:30.0077043+05:30', Id="2590a678-fe17-41ab-a779-c65456fc7df9")
+2024-03-04 13:50:34.501 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="2590a678-fe17-41ab-a779-c65456fc7df9", Duration=4493ms)
+2024-03-04 13:50:34.504 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T08:20:30.0077025", duration="00:00:04.4968072", succeeded=true)
+2024-03-04 13:50:39.995 +05:30 [INF] Stopping JobHost
+2024-03-04 13:50:40.012 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:50:40.0126887+05:30', Id="4f11c8bf-2098-4570-bd30-d33f59abe4cf")
+2024-03-04 13:50:40.040 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:52:38.580 +05:30 [INF] LoggerFilterOptions
+{
+  "MinLevel": "Information",
+  "Rules": [
+    {
+      "ProviderName": "Serilog.Extensions.Logging.SerilogLoggerProvider",
+      "CategoryName": null,
+      "LogLevel": "Trace",
+      "Filter": null
+    }
+  ]
+}
+2024-03-04 13:52:38.683 +05:30 [INF] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2024-03-04 13:52:38.686 +05:30 [INF] FunctionResultAggregatorOptions
+{
+  "BatchSize": 1000,
+  "FlushTimeout": "00:00:30",
+  "IsEnabled": true
+}
+2024-03-04 13:52:38.688 +05:30 [INF] SingletonOptions
+{
+  "LockPeriod": "00:00:15",
+  "ListenerLockPeriod": "00:01:00",
+  "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+  "LockAcquisitionPollingInterval": "00:00:05",
+  "ListenerLockRecoveryPollingInterval": "00:01:00"
+}
+2024-03-04 13:52:38.700 +05:30 [INF] Starting JobHost
+2024-03-04 13:52:39.115 +05:30 [INF] Found the following functions:
+UserRetrival.Functions.Data_Retrieving
+
+2024-03-04 13:52:39.217 +05:30 [INF] The next 5 occurrences of the 'Data_Retrieving' schedule (Cron: '0,10,20,30,40,50 * * * * *') will be:
+03/04/2024 13:52:40+05:30 (03/04/2024 08:22:40Z)
+03/04/2024 13:52:50+05:30 (03/04/2024 08:22:50Z)
+03/04/2024 13:53:00+05:30 (03/04/2024 08:23:00Z)
+03/04/2024 13:53:10+05:30 (03/04/2024 08:23:10Z)
+03/04/2024 13:53:20+05:30 (03/04/2024 08:23:20Z)
+
+2024-03-04 13:52:39.233 +05:30 [INF] Job host started
+2024-03-04 13:52:40.114 +05:30 [INF] Executing 'Data_Retrieving' (Reason='Timer fired at 2024-03-04T13:52:40.0687483+05:30', Id="cd2d793d-9c9e-4a8c-a829-6d71bf33eaea")
+2024-03-04 13:52:44.808 +05:30 [INF] Executed 'Data_Retrieving' (Succeeded, Id="cd2d793d-9c9e-4a8c-a829-6d71bf33eaea", Duration=4732ms)
+2024-03-04 13:52:44.828 +05:30 [INF] Result '{FunctionName}' (started at="2024-03-04T08:22:40.0680587", duration="00:00:04.7365878", succeeded=true)
+2024-03-04 13:52:46.231 +05:30 [INF] Stopping JobHost
+2024-03-04 13:52:46.244 +05:30 [INF] Stopping the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:52:46.263 +05:30 [INF] Stopped the listener 'Microsoft.Azure.WebJobs.Host.Listeners.SingletonListener' for function 'Data_Retrieving'
+2024-03-04 13:52:46.276 +05:30 [INF] Job host stopped

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using static UserRetrival.GraphApiService;
+using static UserRetrival.OktaApiService;
 
 namespace UserRetrival
 {
@@ -26,20 +27,29 @@ namespace UserRetrival
                 Console.WriteLine($"C# Timer trigger function executed at: {DateTime.Now}");
 
                 var scope = new[] { "https://graph.microsoft.com/.default" };
+                var oktaDomain = _configuration["Okta:Domain"];
+                var oktaApiToken = _configuration["Okta:AuthorizationHeader"];
                 var connectionString = _configuration["Database:ConnectionString"];
 
                 var authResult = await AzureADAuthentication.AuthenticateAsync(_configuration, scope);
-                var users = await GraphApiService.FetchUsersAsync(authResult);
-                var groups = await GraphApiService.FetchGroupsAsync(authResult);
+                var oktaGroups = await OktaApiService.FetchGroupsAsync(oktaDomain, oktaApiToken);
+
+                var users = await FetchUsersAsync(authResult);
+                var groups = await FetchGroupsAsync(authResult);
 
                 PrintUsers(users);
                 PrintGroups(groups);
+
+
+                PrintOktaUsers(oktaGroups);
 
                 if (TestDatabaseConnection(connectionString))
                 {
                     Console.WriteLine("Database connection successful.");
                     await DatabaseService.StoreUsersAsync(connectionString, users);
                     await DatabaseService.StoreGroupsAsync(connectionString, groups);
+                    await DatabaseService.StoreOktaGroupsAsync(connectionString, oktaGroups);
+
                     Console.WriteLine($"Data processed at {DateTime.Now}");
                 }
                 else
@@ -68,6 +78,15 @@ namespace UserRetrival
             foreach (var group in groups)
             {
                 Console.WriteLine($"Group ID: {group.Id}, DisplayName: {group.DisplayName}, Mail: {group.Mail ?? "N/A"}, MailNickname: {group.MailNickname ?? "N/A"}");
+            }
+        }
+
+        private void PrintOktaUsers(List<OktaGroup> oktaUsers)
+        {
+            Console.WriteLine("Retrieved Okta Users:");
+            foreach (var user in oktaUsers)
+            {
+                Console.WriteLine($"Okta Group ID: {user.Id}, Okta GroupName: {user.Name}, Okta Type: {user.Type}");
             }
         }
 

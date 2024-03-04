@@ -20,7 +20,7 @@ class Program
 
         try
         {
-            CreateHostBuilder().Build().Run();  
+            CreateHostBuilder().Build().Run();
         }
         catch (Exception ex)
         {

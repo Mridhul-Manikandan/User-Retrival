@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using static UserRetrival.GraphApiService;
+using static UserRetrival.OktaApiService;
 
 namespace UserRetrival
 {
@@ -65,6 +65,64 @@ namespace UserRetrival
                 await command.ExecuteNonQueryAsync();
             }
         }
+
+       /* public static async Task StoreOktaUsersAsync(string connectionString, List<OktaUser> oktaUsers)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                foreach (var user in oktaUsers)
+                {
+                    await InsertOktaUsersAsync(connection, user);
+                }
+            }
+        }
+
+        private static async Task InsertOktaUsersAsync(SqlConnection connection, OktaApiService.OktaUser user)
+        {
+            using (var command = new SqlCommand(
+               "INSERT INTO Groups (GroupId, GroupName, MailId, MailNickname, Access_Provider) " +
+                "VALUES (@GroupId, @GroupName, @MailId, @MailNickname, @AccessProvider)", connection))
+            {
+                command.Parameters.AddWithValue("@GroupId", group.Id);
+                command.Parameters.AddWithValue("@GroupName", group.Name);
+                command.Parameters.AddWithValue("@MailId", group.Type ?? "-");
+                command.Parameters.AddWithValue("@AccessProvider", "Okta");
+
+                await command.ExecuteNonQueryAsync();
+            }
+        }*/
+
+
+        public static async Task StoreOktaGroupsAsync(string connectionString, List<OktaGroup> oktaGroups)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                foreach (var group in oktaGroups)
+                {
+                    await InsertOktaGroupsAsync(connection, group);
+                }
+            }
+        }
+
+        private static async Task InsertOktaGroupsAsync(SqlConnection connection, OktaApiService.OktaGroup group)
+        {
+            using (var command = new SqlCommand(
+               "INSERT INTO Groups (GroupId, GroupName, MailId, MailNickname, Access_Provider) " +
+                "VALUES (@GroupId, @GroupName, @MailId, @MailNickname, @AccessProvider)", connection))
+            {
+                command.Parameters.AddWithValue("@GroupId", group.Id);
+                command.Parameters.AddWithValue("@GroupName", group.Name);
+                command.Parameters.AddWithValue("@MailId", group.Type ?? "-");
+                command.Parameters.AddWithValue("@AccessProvider", "Okta");
+
+                await command.ExecuteNonQueryAsync();
+            }
+        }
+
 
     }
 }
